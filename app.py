@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 def extract_text_from_file(file):
     filename = file.filename
